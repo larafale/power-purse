@@ -1,0 +1,55 @@
+{
+  "name": "power-purse",
+  "version": "0.0.2",
+  "description": "embedded database for maintaining accounts with balances of fungible assets",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "npm run build && mocha -R spec test/",
+    "start": "npm run build && node build/bridges",
+    "build": "gulp"
+  },
+  "bin": {
+    "power-purse": "./build/bin/power-purse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenzeiler/power-purse.git"
+  },
+  "keywords": [
+    "accounting"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenzeiler/power-purse/issues"
+  },
+  "homepage": "https://github.com/stevenzeiler/power-purse",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "bookshelf": "^0.7.9",
+    "bridges": "0.3.0",
+    "bridges-application": "^0.2.1",
+    "bridges-express": "^0.1.0",
+    "express": "^4.10.5",
+    "gulp": "^3.8.10",
+    "knex": "^0.7.3",
+    "lodash": "^2.4.1",
+    "nconf": "^0.7.1",
+    "passport": "^0.2.1",
+    "pg": "^4.1.0",
+    "sqlite3": "^3.0.4",
+    "winston": "^0.8.3"
+  },
+  "devDependencies": {
+    "gulp-6to5": "^1.0.2",
+    "chai": "^1.10.0",
+    "sinon": "^1.12.1",
+    "supertest": "^0.15.0",
+    "mocha": "^2.0.1",
+    "jshint": "^2.5.10",
+    "istanbul": "^0.3.5",
+    "coveralls": "^2.11.2",
+    "gulp-jshint": "^1.9.0",
+    "gulp-uglify": "^1.0.2"
+  }
+}
