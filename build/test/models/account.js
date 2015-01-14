@@ -7,7 +7,7 @@ var purse = require(path.join(__dirname, "/../helpers/purse"));
 describe("Account", function () {
   var uuid = UUID.v4();
 
-  it("should be persisted with a uid", function () {
+  it("should be persisted with a uid", function (done) {
     purse.accounts.register({
       uid: uuid
     }).then(function (account) {
@@ -16,7 +16,7 @@ describe("Account", function () {
     });
   });
 
-  it("should maintain uniqueness amount uuids", function () {
+  it("should maintain uniqueness amount uuids", function (done) {
     purse.accounts.register({
       uid: uuid
     }).error(function (error) {
@@ -29,8 +29,11 @@ describe("Account", function () {
     purse.accounts.register({
       uid: UUID.v4()
     }).then(function (account) {
-      account.getBalances().then(function (balances) {
+      account.balances.fetch().then(function (balances) {
         assert.strictEqual(balances.length, 0);
+        done();
+      }).error(function (error) {
+        console.log("error", error);
         done();
       });
     });

@@ -1,13 +1,21 @@
 "use strict";
 
-var Accounts = (function () {
-  var Accounts = function Accounts() {};
+var Promise = require("bluebird");
 
-  Accounts.prototype.register = function () {};
+module.exports = function (collections, models) {
+  var AccountsLib = (function () {
+    var AccountsLib = function AccountsLib() {};
 
-  Accounts.prototype.find = function () {};
+    AccountsLib.prototype.register = function () {
+      return new Promise(function () {});
+    };
 
-  return Accounts;
-})();
+    AccountsLib.prototype.find = function () {
+      return new Promise(function () {});
+    };
 
-module.exports = Accounts;
+    return AccountsLib;
+  })();
+
+  return AccountsLib;
+};

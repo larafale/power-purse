@@ -38,11 +38,11 @@ signing key.
       knex      : knexDbConnection
     })
 
-    Promise<Account> purse.registerAccount({
+    Promise<Account> purse.accounts.register({
       uid: '13lkjl2k34jlk3j4jijzlij'
     })
 
-    Promise<Account> purse.getAccount({
+    Promise<Account> purse.accounts.find({
       uid: '13lkjl2k34jlk3j4jijzlij'
     })
     
