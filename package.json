@@ -1,6 +1,6 @@
 {
   "name": "power-purse",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "embedded database for maintaining accounts with balances of fungible assets",
   "main": "build/lib/index.js",
   "scripts": {
