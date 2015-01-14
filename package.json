@@ -2,9 +2,9 @@
   "name": "power-purse",
   "version": "0.0.2",
   "description": "embedded database for maintaining accounts with balances of fungible assets",
-  "main": "build/index.js",
+  "main": "build/lib/index.js",
   "scripts": {
-    "test": "npm run build && mocha -R spec test/",
+    "test": "npm run build && mocha -R spec build/test",
     "start": "npm run build && node build/bridges",
     "build": "gulp"
   },

@@ -1,16 +1,20 @@
-var dbHelper = require(__dirname+'/helpers/database');
-var fs       = require('fs');
+var dbHelper   = require(__dirname+'/helpers/database');
+var fs         = require('fs');
+var assert     = require('assert');
+var path       = require('path');
+var PowerPurse = require(path.join(__dirname, '/../'));
 
 describe('Power Purse', function() {
-
+  /*
   before(function(done) {
     dbHelper.sync().then(function() { done() });
   });
+  */
 
   it('should be initialized with a db connection and key', function() {
 
     var purse = new PowerPurse({
-      signingPublicKey: fs.readFileSync(__dirname+'/helpers/rsa-public.pem'),
+      signingPublicKey: fs.readFileSync(__dirname+'/../../src/test/helpers/rsa-public.pem'),
       bookshelf : dbHelper.bookshelf,
       knex      : dbHelper.knex  
     });
