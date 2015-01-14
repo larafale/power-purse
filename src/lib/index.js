@@ -1,21 +1,8 @@
-var Accounts = require(__dirname+'/accounts');
 
-function validateOptions(options, key) {
-  if (!options[key]) { throw new Error('options.'+key+' is required') }
-}
+module.exports = function(collections, models) {
 
-class PowerPurse {
-
-  constructor(options) {
-    validateOptions(options, 'signingPublicKey')
-    validateOptions(options, 'bookshelf')
-    validateOptions(options, 'knex')
-  }
-
-  get accounts() {
-    return new Accounts()
+  return {
+    Accounts: require(__dirname+'/accounts')(collections, models)
   }
 }
-
-module.exports = PowerPurse
 

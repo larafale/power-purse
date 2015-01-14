@@ -1,13 +1,20 @@
+var Promise  = require('bluebird');
 
-class Accounts {
+module.exports = function(collections, models) {
 
-  register() {
-    
+  class AccountsLib {
+
+    register() {
+      return new Promise(function() {
+      });
+    }
+
+    find() {
+      return new Promise(function() {
+      });
+    }
   }
-
-  find() {
-  }
+  
+  return AccountsLib
 }
-
-module.exports = Accounts
 

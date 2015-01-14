@@ -2,9 +2,9 @@
   "name": "power-purse",
   "version": "0.0.4",
   "description": "embedded database for maintaining accounts with balances of fungible assets",
-  "main": "build/lib/index.js",
+  "main": "build/lib/purse.js",
   "scripts": {
-    "test": "npm run build && mocha -R spec build/test",
+    "test": "npm run build && mocha -R spec build/test/**.js build/test/**/*.js",
     "start": "npm run build && node build/bridges",
     "build": "gulp"
   },
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/stevenzeiler/power-purse",
   "dependencies": {
+    "bluebird": "^2.6.4",
     "body-parser": "^1.10.0",
     "bookshelf": "^0.7.9",
     "bridges": "0.3.0",
@@ -32,7 +33,6 @@
     "bridges-express": "^0.1.0",
     "express": "^4.10.5",
     "gulp": "^3.8.10",
-    "knex": "^0.7.3",
     "lodash": "^2.4.1",
     "nconf": "^0.7.1",
     "passport": "^0.2.1",

@@ -2,14 +2,9 @@ var dbHelper   = require(__dirname+'/helpers/database');
 var fs         = require('fs');
 var assert     = require('assert');
 var path       = require('path');
-var PowerPurse = require(path.join(__dirname, '/../'));
+var PowerPurse = require(path.join(__dirname, '/../../'));
 
 describe('Power Purse', function() {
-  /*
-  before(function(done) {
-    dbHelper.sync().then(function() { done() });
-  });
-  */
 
   it('should be initialized with a db connection and key', function() {
 
